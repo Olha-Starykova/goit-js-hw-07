@@ -69,37 +69,8 @@ items.map((item) => {
     });
 
 
+//=========================================================2==============================
 
-
-//==============================2========================================
-// const categoryItemRef = document.querySelectorAll(".item");
-// console.log(categoryItemRef);
-// console.log(`В списке ${categoryItemRef.length} категории`);
-// console.log("================================================");
-// const categoryFirstRef = document.querySelector(".item");
-// const titleFirstRef = categoryFirstRef.querySelector("h2");
-// const numberFirstRef = categoryFirstRef.querySelectorAll("li");
-// console.log(
-//     `Категория: ${titleFirstRef.textContent}\nКоличество элементов: ${numberFirstRef.length}`
-// );
-// console.log("================================================");
-// const categorySecRef = categoryFirstRef.nextElementSibling;
-// console.log(
-//     `Категория: ${
-//     categorySecRef.querySelector("h2").textContent
-//     } \nКоличество элементов: ${categorySecRef.querySelectorAll("li").length}`
-// );
-// console.log("================================================");
-// const categoryThirdRef = categorySecRef.nextElementSibling;
-// console.log(
-//     `Категория: ${
-//     categoryThirdRef.querySelector("h2").textContent
-//     } \nКоличество элементов: ${categoryThirdRef.querySelectorAll("li").length}`
-// );
-
-
-
-//=========================================================3==============================
 const totalCategories = document.querySelectorAll(".item");
 console.log(`В списке ${totalCategories.length} категории.`);
 
@@ -109,4 +80,5 @@ const categoriesArray = [...totalCategories]
 Количество элементов: ${categories.children[1].children.length}`
     )
     .join("\n");
+    
 console.log(categoriesArray);
