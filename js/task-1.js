@@ -47,7 +47,7 @@
 Категория: Животные
 Количество элементов: 4 */
 
-
+console.log('<------1------>');
 const items = [...document.querySelectorAll("li.item")]; //так как есть итератор, сделали массив , что бы можно было итерироваться
 //console.log(`items`, items);
 console.log(`В списке ${items.length} категории.`);
@@ -55,7 +55,7 @@ console.log(`В списке ${items.length} категории.`);
 items.map((item) => {
   //console.log("item", item);
     const title = item.querySelector("h2");
-//    console.log("title", title);
+    //console.log("title", title);
   const list = item.querySelectorAll("ul li");
   //console.log("list", list);
   return {
@@ -71,14 +71,14 @@ items.map((item) => {
 
 //=========================================================2==============================
 
-const totalCategories = document.querySelectorAll(".item");
-console.log(`В списке ${totalCategories.length} категории.`);
+// const totalCategories = document.querySelectorAll(".item");
+// console.log(`В списке ${totalCategories.length} категории.`);
 
-const categoriesArray = [...totalCategories]
-    .map(
-        categories => `Категория: ${categories.children[0].textContent}
-Количество элементов: ${categories.children[1].children.length}`
-    )
-    .join("\n");
+// const categoriesArray = [...totalCategories]
+//     .map(
+//         categories => `Категория: ${categories.children[0].textContent}
+// Количество элементов: ${categories.children[1].children.length}`
+//     )
+//     .join("\n");
     
-console.log(categoriesArray);
+// console.log(categoriesArray);

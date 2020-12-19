@@ -1,12 +1,17 @@
-/**Напиши скрипт для создания галлереи изображений по массиву данных.
+/**Напиши скрипт для создания галлереи изображений 
+ * по массиву данных.
 
 В HTML есть список ul#gallery.
 
 <ul id="gallery"></ul>
-Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные строки и insertAdjacentHTML().
+Используй массив объектов images для создания тегов img 
+вложенных в li. Для создания разметки используй шаблонные
+ строки и insertAdjacentHTML().
 
-Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.*/
+Все элементы галереи должны добавляться в DOM за одну 
+операцию вставки.
+Добавь минимальное оформление галереи флексбоксами или
+ гридами через css-классы.*/
 
 const images = [
   {
@@ -26,25 +31,21 @@ const images = [
   },
 ]; 
 
-
-// const ulRef = document.querySelector('#gallery');
-
-// ulRef.insertAdjacentHTML('beforebegin', '<li>beforebegin заголовок</li>');
-// ulRef.insertAdjacentHTML('afterbegin', '<li>afterbegin item</li>');
-// ulRef.insertAdjacentHTML('beforeend', '<li>beforeend item</li>');
-// ulRef.insertAdjacentHTML('afterend', '<p>afterend текст</p>');
-// console.log(ulRef);
+console.log('<-----3----->');
 
 const createGalleryItem = ({ url, alt }) =>
-    `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
-const galleryMarkup = images.reduce(
+  `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
+    
+//console.log(createGalleryItem(images));
+
+const gallery = images.reduce(
     (acc, item) => acc + createGalleryItem(item),
     ""
 );
 
-console.log(galleryMarkup);
-const galleryList = document.querySelector("#gallery");
+const galleryListRef = document.querySelector("#gallery");
 
-galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
+galleryListRef.insertAdjacentHTML("afterbegin", gallery);
 
-galleryList.setAttribute("style", "list-style-type:none; display: flex;");
+galleryListRef.setAttribute("style", "list-style-type:none; display: flex;");
+console.log(galleryListRef);

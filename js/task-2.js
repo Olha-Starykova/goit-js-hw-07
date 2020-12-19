@@ -1,31 +1,28 @@
+const ingredients = [
+  "Картошка",
+  "Грибы",
+  "Чеснок",
+  "Помидоры",
+  "Зелень",
+  "Приправы",
+];
 
+/**Напиши скрипт, который для каждого элемента массива
+ *  ingredients создаст отдельный li,
+ * после чего вставит все li за одну операцию в список ul.ingredients.
+ *  Для создания DOM-узлов используй document.createElement(). */
 
- const ingredients = [
-     "Картошка",
-     "Грибы",
-     "Чеснок",
-     "Помидоры",
-     "Зелень",
-     "Приправы"
- ];
+console.log("<-------2------>");
 
-// const item = document.createElement("li");
-// item.textContent = "Картошка";
+const ulRef = document.querySelector("#ingredients");
+const ingredientsRef = ingredients.forEach((ingredient) => {
+  //console.log("ingredient", ingredient);
 
-// const div = document.querySelector(".ingredients");
-// const ref = div.appendChild(item);
-// console.log(ref);
- 
-const ulRef = ingredients.forEach(ingredient => {
-    const div = document.querySelector("#ingredients");
-    let items = document.createElement("li");
-    console.log(items);
-    items.textContent = ingredient;
-     //console.log(ingredient);
-       div.append(items);
-    
- });
+  let items = document.createElement("li");
+  //console.log(items);
+  items.textContent = ingredient;
 
-console.log(ulRef);  
+  ulRef.append(items);
+});
 
-
+console.log(ulRef);
