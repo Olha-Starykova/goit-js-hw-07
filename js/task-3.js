@@ -31,19 +31,21 @@ const images = [
   },
 ]; 
 
-console.log('<-----3----->');
+
+/**3 таск. Можно объединить в шаблонной строке и атрибуты и стили и разместить в редьюс, будет гораздо компактней */
+
+console.log("<---3--->");
+
+const galleryListRef = document.querySelector("#gallery");
 
 const createGalleryItem = ({ url, alt }) =>
   `<li><img src="${url}" alt="${alt}" width = 200 height = 150></li>`;
     
-//console.log(createGalleryItem(images));
 
 const gallery = images.reduce(
     (acc, item) => acc + createGalleryItem(item),
     ""
 );
-
-const galleryListRef = document.querySelector("#gallery");
 
 galleryListRef.insertAdjacentHTML("afterbegin", gallery);
 

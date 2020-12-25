@@ -7,6 +7,7 @@ const ingredients = [
   "Приправы",
 ];
 
+
 /**Напиши скрипт, который для каждого элемента массива
  *  ingredients создаст отдельный li,
  * после чего вставит все li за одну операцию в список ul.ingredients.
@@ -14,15 +15,15 @@ const ingredients = [
 
 console.log("<-------2------>");
 
-const ulRef = document.querySelector("#ingredients");
-const ingredientsRef = ingredients.forEach((ingredient) => {
-  //console.log("ingredient", ingredient);
+const ref = document.querySelector("#ingredients");
 
-  let items = document.createElement("li");
-  //console.log(items);
-  items.textContent = ingredient;
 
-  ulRef.append(items);
+
+const masiv = ingredients.map((el) => {
+  const licreat = document.createElement("li");
+  licreat.innerHTML = el;
+  ref.append(licreat);
 });
 
-console.log(ulRef);
+console.log(ref);
+
